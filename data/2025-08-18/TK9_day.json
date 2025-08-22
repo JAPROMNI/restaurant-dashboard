@@ -1,0 +1,246 @@
+{
+  "date": "2025-08-18",
+  "restaurant": "TK9",
+  "revenue": 1335,
+  "orders": 89,
+  "grade": "F",
+  "manager": "Salazar, Maria ",
+  "auto_clockouts": 0,
+  "morning_shift": {
+    "employees": 9,
+    "orders": 89,
+    "revenue": 1335,
+    "avg_time": 26.221535580524346,
+    "grade": "F",
+    "roster": {
+      "drive_thru": [
+        {
+          "name": "Ovalle , Martina",
+          "orders": 10,
+          "avg_time": 29.189999999999998,
+          "grade": "F",
+          "hours": 7.2
+        }
+      ],
+      "lobby": [
+        {
+          "name": "Martinez , Sami",
+          "orders": 23,
+          "avg_time": 23.03333333333334,
+          "grade": "C",
+          "hours": 6.42
+        },
+        {
+          "name": "Navarro, Norma",
+          "orders": 29,
+          "avg_time": 25.645977011494253,
+          "grade": "D",
+          "hours": 7.47
+        }
+      ],
+      "kitchen": [
+        {
+          "name": "Hernandez, Fidelia ",
+          "orders": 0,
+          "avg_time": 24.002864583333334,
+          "grade": "C",
+          "hours": 8.95,
+          "kitchen_output": 64,
+          "kitchen_avg_time": 24.002864583333334
+        },
+        {
+          "name": "Villalobos , Veronica ",
+          "orders": 0,
+          "avg_time": 24.125132275132277,
+          "grade": "C",
+          "hours": 8.48,
+          "kitchen_output": 63,
+          "kitchen_avg_time": 24.125132275132277
+        },
+        {
+          "name": "Hernandez, Celinda",
+          "orders": 0,
+          "avg_time": 25.457792207792203,
+          "grade": "D",
+          "hours": 12.87,
+          "kitchen_output": 78,
+          "kitchen_avg_time": 25.457792207792203
+        }
+      ]
+    }
+  },
+  "evening_shift": {
+    "employees": 0,
+    "orders": 0,
+    "revenue": 0,
+    "avg_time": 0,
+    "grade": "N/A",
+    "roster": {
+      "drive_thru": [],
+      "lobby": [],
+      "kitchen": []
+    }
+  },
+  "all_employees": [
+    {
+      "name": "Hernandez, Fidelia ",
+      "shift": "morning",
+      "position": "Kitchen",
+      "job_title": "Cook",
+      "hours": 8.95,
+      "orders_served": 0,
+      "drive_thru_orders": 0,
+      "lobby_orders": 0,
+      "avg_time": 24.002864583333334,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 64,
+      "kitchen_avg_time": 24.002864583333334
+    },
+    {
+      "name": "Villalobos , Veronica ",
+      "shift": "morning",
+      "position": "Kitchen",
+      "job_title": "Cook",
+      "hours": 8.48,
+      "orders_served": 0,
+      "drive_thru_orders": 0,
+      "lobby_orders": 0,
+      "avg_time": 24.125132275132277,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 63,
+      "kitchen_avg_time": 24.125132275132277
+    },
+    {
+      "name": "Salazar, Maria ",
+      "shift": "morning",
+      "position": "Manager",
+      "job_title": "Shift Manager / Assistant Manager",
+      "hours": 7.31,
+      "orders_served": 17,
+      "drive_thru_orders": 0,
+      "lobby_orders": 17,
+      "avg_time": 31.924509803921577,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "F",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "Melendez, Ninoska",
+      "shift": "morning",
+      "position": "Other",
+      "job_title": "Tortillero/a",
+      "hours": 14.94,
+      "orders_served": 0,
+      "drive_thru_orders": 0,
+      "lobby_orders": 0,
+      "avg_time": 0,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "N/A",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "Martinez , Sami",
+      "shift": "morning",
+      "position": "Server",
+      "job_title": "Server",
+      "hours": 6.42,
+      "orders_served": 23,
+      "drive_thru_orders": 0,
+      "lobby_orders": 23,
+      "avg_time": 23.03333333333334,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "Ovalle , Martina",
+      "shift": "morning",
+      "position": "Drive-Thru",
+      "job_title": "Drive-Thru",
+      "hours": 7.2,
+      "orders_served": 10,
+      "drive_thru_orders": 0,
+      "lobby_orders": 10,
+      "avg_time": 29.189999999999998,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "F",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "Hernandez, Celinda",
+      "shift": "morning",
+      "position": "Kitchen",
+      "job_title": "Cook",
+      "hours": 12.87,
+      "orders_served": 0,
+      "drive_thru_orders": 0,
+      "lobby_orders": 0,
+      "avg_time": 25.457792207792203,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "D",
+      "auto_clocked": false,
+      "kitchen_output": 78,
+      "kitchen_avg_time": 25.457792207792203
+    },
+    {
+      "name": "Navarro, Norma",
+      "shift": "morning",
+      "position": "Server",
+      "job_title": "Server",
+      "hours": 7.47,
+      "orders_served": 29,
+      "drive_thru_orders": 0,
+      "lobby_orders": 29,
+      "avg_time": 25.645977011494253,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "D",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "CASHIER, AM",
+      "shift": "morning",
+      "position": "Manager",
+      "job_title": "General Manager",
+      "hours": 7.43,
+      "orders_served": 10,
+      "drive_thru_orders": 0,
+      "lobby_orders": 10,
+      "avg_time": 22.56,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    }
+  ],
+  "issues_detected": [
+    "Evening understaffed: 0 vs 9 morning",
+    "Salazar: 32min avg (target <20)",
+    "Ovalle : 29min avg (target <20)",
+    "Hernandez: 25min avg (target <20)",
+    "Navarro: 26min avg (target <20)"
+  ]
+}

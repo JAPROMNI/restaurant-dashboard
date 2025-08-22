@@ -1,0 +1,242 @@
+{
+  "date": "2025-08-19",
+  "restaurant": "TK9",
+  "revenue": 1470,
+  "orders": 98,
+  "grade": "C",
+  "manager": "CASHIER, AM",
+  "auto_clockouts": 1,
+  "morning_shift": {
+    "employees": 7,
+    "orders": 98,
+    "revenue": 1470,
+    "avg_time": 19.498809523809523,
+    "grade": "C",
+    "roster": {
+      "drive_thru": [
+        {
+          "name": "Ovalle , Martina",
+          "orders": 18,
+          "avg_time": 18.37777777777778,
+          "grade": "C",
+          "hours": 8.33
+        },
+        {
+          "name": "lopez, samantha",
+          "orders": 5,
+          "avg_time": 18.513333333333332,
+          "grade": "C",
+          "hours": 7.11
+        }
+      ],
+      "lobby": [
+        {
+          "name": "MORALES, ADRIAN",
+          "orders": 45,
+          "avg_time": 18.615555555555556,
+          "grade": "B",
+          "hours": 6.91
+        }
+      ],
+      "kitchen": [
+        {
+          "name": "Hernandez, Celinda",
+          "orders": 0,
+          "avg_time": 19.936363636363634,
+          "grade": "C",
+          "hours": 9.27,
+          "kitchen_output": 78,
+          "kitchen_avg_time": 19.936363636363634
+        },
+        {
+          "name": "Hernandez, Fidelia ",
+          "orders": 0,
+          "avg_time": 19.936363636363634,
+          "grade": "C",
+          "hours": 8.91,
+          "kitchen_output": 78,
+          "kitchen_avg_time": 19.936363636363634
+        },
+        {
+          "name": "Villalobos , Veronica ",
+          "orders": 0,
+          "avg_time": 18.707407407407402,
+          "grade": "C",
+          "hours": 6.89,
+          "kitchen_output": 73,
+          "kitchen_avg_time": 18.707407407407402
+        }
+      ]
+    }
+  },
+  "evening_shift": {
+    "employees": 2,
+    "orders": 0,
+    "revenue": 0,
+    "avg_time": 0,
+    "grade": "N/A",
+    "roster": {
+      "drive_thru": [],
+      "lobby": [],
+      "kitchen": []
+    }
+  },
+  "all_employees": [
+    {
+      "name": "Hernandez, Celinda",
+      "shift": "morning",
+      "position": "Kitchen",
+      "job_title": "Cook",
+      "hours": 9.27,
+      "orders_served": 0,
+      "drive_thru_orders": 0,
+      "lobby_orders": 0,
+      "avg_time": 19.936363636363634,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 78,
+      "kitchen_avg_time": 19.936363636363634
+    },
+    {
+      "name": "Ovalle , Martina",
+      "shift": "morning",
+      "position": "Drive-Thru",
+      "job_title": "Drive-Thru",
+      "hours": 8.33,
+      "orders_served": 18,
+      "drive_thru_orders": 0,
+      "lobby_orders": 18,
+      "avg_time": 18.37777777777778,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "Hernandez, Fidelia ",
+      "shift": "morning",
+      "position": "Kitchen",
+      "job_title": "Cook",
+      "hours": 8.91,
+      "orders_served": 0,
+      "drive_thru_orders": 0,
+      "lobby_orders": 0,
+      "avg_time": 19.936363636363634,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 78,
+      "kitchen_avg_time": 19.936363636363634
+    },
+    {
+      "name": "lopez, samantha",
+      "shift": "morning",
+      "position": "Drive-Thru",
+      "job_title": "Drive-Thru",
+      "hours": 7.11,
+      "orders_served": 5,
+      "drive_thru_orders": 0,
+      "lobby_orders": 5,
+      "avg_time": 18.513333333333332,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "Salazar, Betty",
+      "shift": "evening",
+      "position": "Other",
+      "job_title": "Chef",
+      "hours": 6.9,
+      "orders_served": 0,
+      "drive_thru_orders": 0,
+      "lobby_orders": 0,
+      "avg_time": 0,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "N/A",
+      "auto_clocked": true,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "CASHIER, AM",
+      "shift": "morning",
+      "position": "Manager",
+      "job_title": "General Manager",
+      "hours": 6.7,
+      "orders_served": 30,
+      "drive_thru_orders": 0,
+      "lobby_orders": 30,
+      "avg_time": 21.660555555555558,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "Villalobos , Veronica ",
+      "shift": "morning",
+      "position": "Kitchen",
+      "job_title": "Cook",
+      "hours": 6.89,
+      "orders_served": 0,
+      "drive_thru_orders": 0,
+      "lobby_orders": 0,
+      "avg_time": 18.707407407407402,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "C",
+      "auto_clocked": false,
+      "kitchen_output": 73,
+      "kitchen_avg_time": 18.707407407407402
+    },
+    {
+      "name": "MORALES, ADRIAN",
+      "shift": "morning",
+      "position": "Server",
+      "job_title": "Server",
+      "hours": 6.91,
+      "orders_served": 45,
+      "drive_thru_orders": 0,
+      "lobby_orders": 45,
+      "avg_time": 18.615555555555556,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "B",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    },
+    {
+      "name": "Melendez, Ninoska",
+      "shift": "evening",
+      "position": "Other",
+      "job_title": "Tortillero/a",
+      "hours": 6.99,
+      "orders_served": 0,
+      "drive_thru_orders": 0,
+      "lobby_orders": 0,
+      "avg_time": 0,
+      "void_count": 0,
+      "void_amount": 0,
+      "grade": "N/A",
+      "auto_clocked": false,
+      "kitchen_output": 0,
+      "kitchen_avg_time": 0
+    }
+  ],
+  "issues_detected": [
+    "Evening understaffed: 2 vs 7 morning"
+  ]
+}
