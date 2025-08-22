@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Analytics Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .header .updated {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            background: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        /* Level 1: Weekly Overview */
+        .level-1 {
+            display: grid;
+            gap: 20px;
+        }
+
+        .restaurant-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .restaurant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+
+        .restaurant-card .rank {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+        }
+
+        .restaurant-card .name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .restaurant-card .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric .value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .metric .label {
+            font-size: 0.9em;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        .metric .change {
+            font-size: 1.1em;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        .change.positive {
+            color: #10b981;
+        }
+
+        .change.negative {
+            color: #ef4444;
+        }
+
+        .grade {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            line-height: 60px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: white;
+        }
+
+        .grade.A-plus, .grade.A { background: linear-gradient(135deg, #10b981, #059669); }
+        .grade.B { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+        .grade.C { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .grade.D, .grade.F { background: linear-gradient(135deg, #ef4444, #dc2626); }
+
+        /* Level 2: Week View */
+        .week-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .week-toggle button {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #667eea;
+            background: white;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .week-toggle button.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .day-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .day-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .day-card .day-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .day-card .revenue {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        /* Level 3: Day Detail */
+        .shift-section {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .shift-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f3f4f6;
+        }
+
+        .shift-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .employee-grid {
+            display: grid;
+            gap: 10px;
+        }
+
+        .employee-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+            background: #f9fafb;
+            border-radius: 8px;
+            align-items: center;
+        }
+
+        .employee-row:hover {
+            background: #f3f4f6;
+        }
+
+        .issues-section {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .issues-section h3 {
+            color: #dc2626;
+            margin-bottom: 15px;
+        }
+
+        .issue-item {
+            padding: 8px 0;
+            color: #7f1d1d;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .nav-tab {
+                width: 100%;
+                text-align: center;
+            }
+
+            .restaurant-card .metrics {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .days-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .employee-row {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Comparison View for Dashboard */
+        .comparison-table {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            overflow-x: auto;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 2px solid #e5e7eb;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .comparison-table .restaurant-name {
+            font-weight: bold;
+            color: #111827;
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .error {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+            color: #dc2626;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        /* Hide sections by default */
+        .level-2, .level-3, .level-4 {
+            display: none;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🍽️ Restaurant Analytics Dashboard</h1>
+            <div class="subtitle">Performance Tracking & Analysis</div>
+            <div class="updated">Last updated: <span id="lastUpdated">Loading...</span></div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-tabs" id="navTabs">
+            <button class="nav-tab active" onclick="showLevel(1)">Weekly Overview</button>
+            <button class="nav-tab" onclick="showLevel(2)" id="level2Tab" style="display:none">Restaurant Week</button>
+            <button class="nav-tab" onclick="showLevel(3)" id="level3Tab" style="display:none">Day Detail</button>
+            <button class="nav-tab" id="mobileToggle" onclick="toggleMobileView()">📱 Mobile View</button>
+        </div>
+
+        <!-- Level 1: Weekly Overview -->
+        <div id="level1" class="level-1">
+            <div class="loading">Loading weekly overview...</div>
+        </div>
+
+        <!-- Level 2: Restaurant Week View -->
+        <div id="level2" class="level-2">
+            <div class="week-toggle">
+                <button class="active" onclick="showWeek('current')">Current Week</button>
+                <button onclick="showWeek('previous')">Previous Week</button>
+            </div>
+            <div id="weekContent" class="days-grid">
+                <!-- Week data will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Level 3: Day Detail -->
+        <div id="level3" class="level-3">
+            <!-- Day details will be loaded here -->
+        </div>
+
+        <!-- Level 4: Employee Detail -->
+        <div id="level4" class="level-4">
+            <!-- Employee details will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let currentLevel = 1;
+        let selectedRestaurant = null;
+        let selectedDate = null;
+        let isMobileView = false;
+        let weeklyData = null;
+        let restaurantWeekData = {};
+        let dayData = {};
+
+        // Check if mobile
+        const isMobile = window.innerWidth <= 768;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadWeeklyOverview();
+            document.getElementById('lastUpdated').textContent = new Date().toLocaleString();
+            
+            // Auto-detect mobile
+            if (isMobile) {
+                isMobileView = true;
+                document.getElementById('mobileToggle').classList.add('active');
+            }
+        });
+
+        // Load Level 1: Weekly Overview
+        async function loadWeeklyOverview() {
+            try {
+                // Determine which file to load
+                const fileName = isMobileView ? 'weekly_overview_mobile.json' : 'weekly_overview_dashboard.json';
+                const response = await fetch(`data/${fileName}`);
+                
+                if (!response.ok) throw new Error('Failed to load data');
+                
+                weeklyData = await response.json();
+                displayWeeklyOverview(weeklyData);
+            } catch (error) {
+                console.error('Error loading weekly overview:', error);
+                document.getElementById('level1').innerHTML = '<div class="error">Failed to load data. Please check your connection.</div>';
+            }
+        }
+
+        // Display Level 1
+        function displayWeeklyOverview(data) {
+            const container = document.getElementById('level1');
+            
+            if (data.version === 'mobile') {
+                // Mobile version - Previous week only
+                let html = `<h2 style="color: white; margin-bottom: 20px;">${data.header}</h2>`;
+                
+                data.restaurants.forEach(rest => {
+                    html += `
+                        <div class="restaurant-card" onclick="selectRestaurant('${rest.restaurant}')">
+                            <div class="rank">${rest.rank_emoji}</div>
+                            <div class="name">${rest.restaurant_name}</div>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <div class="value">$${(rest.revenue/1000).toFixed(1)}k</div>
+                                    <div class="label">Revenue</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="value">${rest.orders}</div>
+                                    <div class="label">Orders</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="value">${rest.avg_speed.toFixed(1)}min</div>
+                                    <div class="label">Avg Speed</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="grade ${rest.grade.replace('+', '-plus')}">${rest.grade}</div>
+                                    <div class="label">Grade</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                container.innerHTML = html;
+                
+            } else {
+                // Dashboard version - Both weeks comparison
+                let html = '<div class="comparison-table"><table>';
+                html += '<thead><tr>';
+                html += '<th>Restaurant</th>';
+                html += '<th>Current Week</th>';
+                html += '<th>Previous Week</th>';
+                html += '<th>Change</th>';
+                html += '</tr></thead><tbody>';
+                
+                data.restaurants.forEach(rest => {
+                    const changeClass = rest.comparison.revenue_change_pct > 0 ? 'positive' : 'negative';
+                    const changeSymbol = rest.comparison.revenue_change_pct > 0 ? '↑' : '↓';
+                    
+                    html += `
+                        <tr onclick="selectRestaurant('${rest.restaurant}')" style="cursor: pointer;">
+                            <td>
+                                <div>${rest.rank_emoji} ${rest.restaurant_name}</div>
+                            </td>
+                            <td>
+                                <div>$${(rest.current_week.revenue/1000).toFixed(1)}k</div>
+                                <div style="color: #999; font-size: 0.9em">${rest.current_week.orders} orders @ ${rest.current_week.avg_speed.toFixed(1)}min</div>
+                                <div class="grade ${rest.current_week.grade.replace('+', '-plus')}" style="display: inline-block; transform: scale(0.7)">${rest.current_week.grade}</div>
+                            </td>
+                            <td>
+                                <div>$${(rest.previous_week.revenue/1000).toFixed(1)}k</div>
+                                <div style="color: #999; font-size: 0.9em">${rest.previous_week.orders} orders @ ${rest.previous_week.avg_speed.toFixed(1)}min</div>
+                                <div class="grade ${rest.previous_week.grade.replace('+', '-plus')}" style="display: inline-block; transform: scale(0.7)">${rest.previous_week.grade}</div>
+                            </td>
+                            <td>
+                                <div class="change ${changeClass}">${changeSymbol} ${Math.abs(rest.comparison.revenue_change_pct).toFixed(1)}%</div>
+                                <div style="color: #999; font-size: 0.9em">Speed: ${rest.comparison.speed_change > 0 ? '+' : ''}${rest.comparison.speed_change.toFixed(1)}min</div>
+                            </td>
+                        </tr>
+                    `;
+                });
+                
+                html += '</tbody></table></div>';
+                container.innerHTML = html;
+            }
+        }
+
+        // Select Restaurant (go to Level 2)
+        async function selectRestaurant(restaurant) {
+            selectedRestaurant = restaurant;
+            
+            // Load restaurant week data
+            try {
+                const response = await fetch(`data/${restaurant}_week.json`);
+                if (!response.ok) throw new Error('Failed to load restaurant data');
+                
+                restaurantWeekData[restaurant] = await response.json();
+                
+                // Show Level 2
+                document.getElementById('level2Tab').style.display = 'inline-block';
+                document.getElementById('level2Tab').textContent = restaurant;
+                showLevel(2);
+                showWeek('current');
+                
+            } catch (error) {
+                console.error('Error loading restaurant week:', error);
+                alert('Failed to load restaurant data');
+            }
+        }
+
+        // Show Week (Level 2)
+        function showWeek(weekType) {
+            const data = restaurantWeekData[selectedRestaurant];
+            if (!data) return;
+            
+            // Update toggle buttons
+            document.querySelectorAll('.week-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            const weekData = weekType === 'current' ? data.current_week : data.previous_week;
+            const container = document.getElementById('weekContent');
+            
+            let html = `<h2 style="color: white; margin-bottom: 20px;">${weekData.week_label} - ${data.restaurant_name}</h2>`;
+            html += `<div class="days-grid">`;
+            
+            weekData.days.forEach(day => {
+                const changeClass = day.wow_change > 0 ? 'positive' : 'negative';
+                const changeSymbol = day.wow_change > 0 ? '📈' : '📉';
+                
+                html += `
+                    <div class="day-card" onclick="selectDay('${day.date}')">
+                        <div class="day-name">${day.day_name}</div>
+                        <div class="revenue">$${(day.revenue/1000).toFixed(1)}k</div>
+                        <div style="color: #666; margin: 10px 0;">
+                            ${day.orders} orders • Grade: ${day.grade}
+                        </div>
+                        ${weekType === 'current' && day.wow_change ? `
+                            <div class="change ${changeClass}">
+                                ${changeSymbol} ${Math.abs(day.wow_change).toFixed(1)}% vs last week
+                            </div>
+                        ` : ''}
+                        ${day.issues_count > 0 ? `
+                            <div style="color: #ef4444; margin-top: 10px;">
+                                ⚠️ ${day.issues_count} issues
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        // Select Day (go to Level 3)
+        async function selectDay(date) {
+            selectedDate = date;
+            
+            // Load day data
+            try {
+                const response = await fetch(`data/${date}/${selectedRestaurant}_day.json`);
+                if (!response.ok) throw new Error('Failed to load day data');
+                
+                dayData = await response.json();
+                
+                // Show Level 3
+                document.getElementById('level3Tab').style.display = 'inline-block';
+                document.getElementById('level3Tab').textContent = date;
+                showLevel(3);
+                displayDayDetail(dayData);
+                
+            } catch (error) {
+                console.error('Error loading day detail:', error);
+                alert('Failed to load day data');
+            }
+        }
+
+        // Display Level 3: Day Detail
+        function displayDayDetail(data) {
+            const container = document.getElementById('level3');
+            
+            let html = `
+                <h2 style="color: white; margin-bottom: 20px;">
+                    ${data.restaurant} - ${data.date}
+                </h2>
+                
+                <div class="shift-section">
+                    <div class="shift-header">
+                        <div>
+                            <div class="shift-title">Day Summary</div>
+                        </div>
+                        <div>
+                            <span class="grade ${data.grade.replace('+', '-plus')}">${data.grade}</span>
+                        </div>
+                    </div>
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="value">$${(data.revenue/1000).toFixed(1)}k</div>
+                            <div class="label">Revenue</div>
+                        </div>
+                        <div class="metric">
+                            <div class="value">${data.orders}</div>
+                            <div class="label">Orders</div>
+                        </div>
+                        <div class="metric">
+                            <div class="value">${data.manager}</div>
+                            <div class="label">Manager</div>
+                        </div>
+                        <div class="metric">
+                            <div class="value">${data.auto_clockouts}</div>
+                            <div class="label">Auto Clock-outs</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Morning Shift -->
+                <div class="shift-section">
+                    <div class="shift-header">
+                        <div class="shift-title">☀️ Morning Shift</div>
+                        <div>
+                            ${data.morning_shift.employees} employees • 
+                            ${data.morning_shift.orders} orders • 
+                            Grade: ${data.morning_shift.grade}
+                        </div>
+                    </div>
+                    ${displayShiftRoster(data.morning_shift.roster)}
+                </div>
+                
+                <!-- Evening Shift -->
+                <div class="shift-section">
+                    <div class="shift-header">
+                        <div class="shift-title">🌙 Evening Shift</div>
+                        <div>
+                            ${data.evening_shift.employees} employees • 
+                            ${data.evening_shift.orders} orders • 
+                            Grade: ${data.evening_shift.grade}
+                        </div>
+                    </div>
+                    ${displayShiftRoster(data.evening_shift.roster)}
+                </div>
+            `;
+            
+            // Add issues if any
+            if (data.issues_detected && data.issues_detected.length > 0) {
+                html += `
+                    <div class="issues-section">
+                        <h3>🚨 Issues Detected</h3>
+                        ${data.issues_detected.map(issue => 
+                            `<div class="issue-item">• ${issue}</div>`
+                        ).join('')}
+                    </div>
+                `;
+            }
+            
+            // Add button to view all employees
+            html += `
+                <div style="margin-top: 30px; text-align: center;">
+                    <button class="nav-tab" onclick="showLevel(4)">View All Employees</button>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        // Display shift roster
+        function displayShiftRoster(roster) {
+            let html = '<div class="employee-grid">';
+            
+            // Drive-thru
+            if (roster.drive_thru && roster.drive_thru.length > 0) {
+                html += '<div style="font-weight: bold; margin: 10px 0;">🚗 Drive-Thru</div>';
+                roster.drive_thru.forEach(emp => {
+                    html += `
+                        <div class="employee-row">
+                            <div>${emp.name}</div>
+                            <div>${emp.orders} orders</div>
+                            <div>${emp.avg_time.toFixed(1)}min avg</div>
+                            <div>Grade: ${emp.grade}</div>
+                        </div>
+                    `;
+                });
+            }
+            
+            // Lobby
+            if (roster.lobby && roster.lobby.length > 0) {
+                html += '<div style="font-weight: bold; margin: 10px 0;">🏪 Lobby</div>';
+                roster.lobby.forEach(emp => {
+                    html += `
+                        <div class="employee-row">
+                            <div>${emp.name}</div>
+                            <div>${emp.orders} orders</div>
+                            <div>${emp.avg_time.toFixed(1)}min avg</div>
+                            <div>Grade: ${emp.grade}</div>
+                        </div>
+                    `;
+                });
+            }
+            
+            // Kitchen
+            if (roster.kitchen && roster.kitchen.length > 0) {
+                html += '<div style="font-weight: bold; margin: 10px 0;">🍳 Kitchen</div>';
+                roster.kitchen.forEach(emp => {
+                    html += `
+                        <div class="employee-row">
+                            <div>${emp.name}</div>
+                            <div>${emp.kitchen_output || 0} orders</div>
+                            <div>${emp.hours.toFixed(1)} hours</div>
+                            <div>Grade: ${emp.grade}</div>
+                        </div>
+                    `;
+                });
+            }
+            
+            html += '</div>';
+            return html;
+        }
+
+        // Show Level
+        function showLevel(level) {
+            // Hide all levels
+            document.querySelectorAll('[id^="level"]').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Show selected level
+            document.getElementById(`level${level}`).style.display = 'block';
+            
+            // Update active tab
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            if (level === 1) {
+                document.querySelectorAll('.nav-tab')[0].classList.add('active');
+            } else if (level === 2) {
+                document.getElementById('level2Tab').classList.add('active');
+            } else if (level === 3) {
+                document.getElementById('level3Tab').classList.add('active');
+            }
+            
+            currentLevel = level;
+        }
+
+        // Toggle Mobile View
+        function toggleMobileView() {
+            isMobileView = !isMobileView;
+            document.getElementById('mobileToggle').classList.toggle('active');
+            loadWeeklyOverview(); // Reload with appropriate version
+        }
+    </script>
+</body>
+</html>
