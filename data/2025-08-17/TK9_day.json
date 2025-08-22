@@ -4,19 +4,77 @@
   "revenue": 2945.27,
   "orders": 168,
   "guests": 208,
-  "grade": "B",
-  "manager": "Unknown",
+  "grade": "D",
+  "manager": "Salazar, Maria ",
   "auto_clockouts": 0,
   "morning_shift": {
-    "employees": 10,
-    "orders": 168,
-    "revenue": 2945.27
+    "employees": 8,
+    "revenue": 1767.162,
+    "orders": 100,
+    "avg_speed": 15,
+    "grade": "B"
   },
   "evening_shift": {
     "employees": 0,
-    "orders": 0,
-    "revenue": 0
+    "revenue": 1178.108,
+    "orders": 67,
+    "avg_speed": 15,
+    "grade": "B"
   },
-  "all_employees": [],
-  "issues_detected": []
+  "all_employees": [
+    {
+      "name": "Hernandez, Celinda",
+      "position": "Kitchen",
+      "hours": 8.57,
+      "auto_clocked": false
+    },
+    {
+      "name": "Villalobos , Veronica ",
+      "position": "Kitchen",
+      "hours": 8.41,
+      "auto_clocked": false
+    },
+    {
+      "name": "Salazar, Maria ",
+      "position": "Manager",
+      "hours": 7.6,
+      "auto_clocked": false
+    },
+    {
+      "name": "Pena , Vilma",
+      "position": "Kitchen",
+      "hours": 8.08,
+      "auto_clocked": false
+    },
+    {
+      "name": "lopez, samantha",
+      "position": "Drive-Thru",
+      "hours": 7.16,
+      "auto_clocked": false
+    },
+    {
+      "name": "Ovalle , Martina",
+      "position": "Server",
+      "hours": 6.41,
+      "auto_clocked": false
+    },
+    {
+      "name": "santander, yerlinson",
+      "position": "Kitchen",
+      "hours": 6.87,
+      "auto_clocked": false
+    },
+    {
+      "name": "Melendez, Ninoska",
+      "position": "Other",
+      "hours": 5.83,
+      "auto_clocked": false
+    }
+  ],
+  "issues_detected": [
+    "NO EVENING SHIFT",
+    "27 slow orders (>25min)"
+  ],
+  "drive_revenue": 0,
+  "lobby_revenue": 5890.54
 }

@@ -4,19 +4,118 @@
   "revenue": 2918.91,
   "orders": 232,
   "guests": 277,
-  "grade": "B",
-  "manager": "Unknown",
-  "auto_clockouts": 0,
+  "grade": "D",
+  "manager": "Salazar, Maria ",
+  "auto_clockouts": 1,
   "morning_shift": {
-    "employees": 10,
-    "orders": 232,
-    "revenue": 2918.91
+    "employees": 15,
+    "revenue": 1751.3459999999998,
+    "orders": 139,
+    "avg_speed": 15,
+    "grade": "B"
   },
   "evening_shift": {
     "employees": 0,
-    "orders": 0,
-    "revenue": 0
+    "revenue": 1167.564,
+    "orders": 92,
+    "avg_speed": 15,
+    "grade": "B"
   },
-  "all_employees": [],
-  "issues_detected": []
+  "all_employees": [
+    {
+      "name": "Villalobos , Veronica ",
+      "position": "Kitchen",
+      "hours": 7.7,
+      "auto_clocked": false
+    },
+    {
+      "name": "Hernandez, Fidelia ",
+      "position": "Kitchen",
+      "hours": 8.56,
+      "auto_clocked": false
+    },
+    {
+      "name": "Salazar, Maria ",
+      "position": "Manager",
+      "hours": 7.7,
+      "auto_clocked": false
+    },
+    {
+      "name": "Salazar, Betty",
+      "position": "Other",
+      "hours": 8.11,
+      "auto_clocked": false
+    },
+    {
+      "name": "lopez, samantha",
+      "position": "Drive-Thru",
+      "hours": 7.02,
+      "auto_clocked": false
+    },
+    {
+      "name": "santander, yerlinson",
+      "position": "Kitchen",
+      "hours": 12.78,
+      "auto_clocked": false
+    },
+    {
+      "name": "MORALES, ADRIAN",
+      "position": "Server",
+      "hours": 5.11,
+      "auto_clocked": false
+    },
+    {
+      "name": "lopez, samantha",
+      "position": "Drive-Thru",
+      "hours": 7.13,
+      "auto_clocked": false
+    },
+    {
+      "name": "C, PM Cashier",
+      "position": "Other",
+      "hours": 6.81,
+      "auto_clocked": false
+    },
+    {
+      "name": "MORALES, ADRIAN",
+      "position": "Server",
+      "hours": 7.03,
+      "auto_clocked": false
+    },
+    {
+      "name": "CASHIER, AM",
+      "position": "Manager",
+      "hours": 0.04,
+      "auto_clocked": false
+    },
+    {
+      "name": "CASHIER, AM",
+      "position": "Manager",
+      "hours": 0.0,
+      "auto_clocked": false
+    },
+    {
+      "name": "CASHIER, AM",
+      "position": "Manager",
+      "hours": 14.56,
+      "auto_clocked": true
+    },
+    {
+      "name": "Melendez, Ninoska",
+      "position": "Other",
+      "hours": 6.81,
+      "auto_clocked": false
+    },
+    {
+      "name": "Hernandez, Fidelia ",
+      "position": "Kitchen",
+      "hours": 0.01,
+      "auto_clocked": false
+    }
+  ],
+  "issues_detected": [
+    "39 slow orders (>25min)"
+  ],
+  "drive_revenue": 0,
+  "lobby_revenue": 5837.82
 }

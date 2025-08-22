@@ -4,19 +4,113 @@
   "revenue": 4307.6,
   "orders": 249,
   "guests": 316,
-  "grade": "B",
-  "manager": "Unknown",
-  "auto_clockouts": 0,
+  "grade": "C",
+  "manager": "Salazar, Maria ",
+  "auto_clockouts": 1,
   "morning_shift": {
-    "employees": 10,
-    "orders": 249,
-    "revenue": 4307.6
+    "employees": 14,
+    "revenue": 2584.56,
+    "orders": 149,
+    "avg_speed": 15,
+    "grade": "B"
   },
   "evening_shift": {
     "employees": 0,
-    "orders": 0,
-    "revenue": 0
+    "revenue": 1723.0400000000002,
+    "orders": 99,
+    "avg_speed": 15,
+    "grade": "B"
   },
-  "all_employees": [],
-  "issues_detected": []
+  "all_employees": [
+    {
+      "name": "Hernandez, Celinda",
+      "position": "Kitchen",
+      "hours": 8.98,
+      "auto_clocked": false
+    },
+    {
+      "name": "Hernandez, Fidelia ",
+      "position": "Kitchen",
+      "hours": 8.53,
+      "auto_clocked": false
+    },
+    {
+      "name": "Salazar, Maria ",
+      "position": "Manager",
+      "hours": 7.81,
+      "auto_clocked": false
+    },
+    {
+      "name": "C, PM Cashier",
+      "position": "Other",
+      "hours": 4.26,
+      "auto_clocked": false
+    },
+    {
+      "name": "Franco , Eduardo ",
+      "position": "Server",
+      "hours": 7.44,
+      "auto_clocked": false
+    },
+    {
+      "name": "Pena , Vilma",
+      "position": "Kitchen",
+      "hours": 8.17,
+      "auto_clocked": false
+    },
+    {
+      "name": "santander, yerlinson",
+      "position": "Kitchen",
+      "hours": 11.98,
+      "auto_clocked": false
+    },
+    {
+      "name": "Martinez , Sami",
+      "position": "Server",
+      "hours": 4.13,
+      "auto_clocked": false
+    },
+    {
+      "name": "MORALES, ADRIAN",
+      "position": "Server",
+      "hours": 4.27,
+      "auto_clocked": false
+    },
+    {
+      "name": "Ovalle , Martina",
+      "position": "Drive-Thru",
+      "hours": 3.14,
+      "auto_clocked": false
+    },
+    {
+      "name": "Melendez, Ninoska",
+      "position": "Other",
+      "hours": 10.88,
+      "auto_clocked": false
+    },
+    {
+      "name": "Ovalle , Martina",
+      "position": "Drive-Thru",
+      "hours": 7.2,
+      "auto_clocked": false
+    },
+    {
+      "name": "C, PM Cashier",
+      "position": "Other",
+      "hours": 14.65,
+      "auto_clocked": true
+    },
+    {
+      "name": "MORALES, ADRIAN",
+      "position": "Server",
+      "hours": 7.55,
+      "auto_clocked": false
+    }
+  ],
+  "issues_detected": [
+    "Evening understaffed: 3 vs 11 morning",
+    "28 slow orders (>25min)"
+  ],
+  "drive_revenue": 0,
+  "lobby_revenue": 8615.2
 }

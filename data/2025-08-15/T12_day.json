@@ -4,19 +4,185 @@
   "revenue": 7810.23,
   "orders": 389,
   "guests": 583,
-  "grade": "B",
-  "manager": "Unknown",
-  "auto_clockouts": 0,
+  "grade": "A",
+  "manager": "ORDONEZ, Rosie ",
+  "auto_clockouts": 2,
   "morning_shift": {
-    "employees": 10,
-    "orders": 389,
-    "revenue": 7810.23
+    "employees": 26,
+    "revenue": 4686.138,
+    "orders": 233,
+    "avg_speed": 15,
+    "grade": "B"
   },
   "evening_shift": {
     "employees": 0,
-    "orders": 0,
-    "revenue": 0
+    "revenue": 3124.092,
+    "orders": 155,
+    "avg_speed": 15,
+    "grade": "B"
   },
-  "all_employees": [],
-  "issues_detected": []
+  "all_employees": [
+    {
+      "name": "Aviles, Genaro",
+      "position": "Kitchen",
+      "hours": 10.02,
+      "auto_clocked": false
+    },
+    {
+      "name": "Diaz, Diego",
+      "position": "Kitchen",
+      "hours": 9.13,
+      "auto_clocked": false
+    },
+    {
+      "name": "Alvarado, Rodolfo",
+      "position": "Kitchen",
+      "hours": 8.44,
+      "auto_clocked": false
+    },
+    {
+      "name": "Dominguez, Jose ",
+      "position": "Kitchen",
+      "hours": 22.28,
+      "auto_clocked": true
+    },
+    {
+      "name": "Vasquez, Norma",
+      "position": "Server",
+      "hours": 8.42,
+      "auto_clocked": false
+    },
+    {
+      "name": "Del angel , Candy ",
+      "position": "Drive-Thru",
+      "hours": 5.06,
+      "auto_clocked": false
+    },
+    {
+      "name": "Zuniga, Sebastian",
+      "position": "Kitchen",
+      "hours": 21.43,
+      "auto_clocked": true
+    },
+    {
+      "name": "ORDONEZ, Rosie ",
+      "position": "Manager",
+      "hours": 8.23,
+      "auto_clocked": false
+    },
+    {
+      "name": "Brito, Victor ",
+      "position": "Other",
+      "hours": 7.09,
+      "auto_clocked": false
+    },
+    {
+      "name": "Caviedes, Esperansa",
+      "position": "Server",
+      "hours": 7.04,
+      "auto_clocked": false
+    },
+    {
+      "name": "Compean, Rosa",
+      "position": "Server",
+      "hours": 6.98,
+      "auto_clocked": false
+    },
+    {
+      "name": "Hernandez, Silvia",
+      "position": "Server",
+      "hours": 6.19,
+      "auto_clocked": false
+    },
+    {
+      "name": "Majana, Maria",
+      "position": "Other",
+      "hours": 6.12,
+      "auto_clocked": false
+    },
+    {
+      "name": "huerta, Arturo ",
+      "position": "Other",
+      "hours": 6.13,
+      "auto_clocked": false
+    },
+    {
+      "name": "Serrato, Joshua ",
+      "position": "Other",
+      "hours": 5.35,
+      "auto_clocked": false
+    },
+    {
+      "name": "Urena, Melissa",
+      "position": "Drive-Thru",
+      "hours": 5.46,
+      "auto_clocked": false
+    },
+    {
+      "name": "Alonso, Lizeth",
+      "position": "Other",
+      "hours": 8.33,
+      "auto_clocked": false
+    },
+    {
+      "name": "Trevino, Melissa",
+      "position": "Other",
+      "hours": 8.31,
+      "auto_clocked": false
+    },
+    {
+      "name": "Gonzales (Line) , Maria",
+      "position": "Kitchen",
+      "hours": 7.96,
+      "auto_clocked": false
+    },
+    {
+      "name": "Camacho, Juan ",
+      "position": "Server",
+      "hours": 9.13,
+      "auto_clocked": false
+    },
+    {
+      "name": "Calderon, Jesus",
+      "position": "Kitchen",
+      "hours": 7.94,
+      "auto_clocked": false
+    },
+    {
+      "name": "Cisneros, Isabel",
+      "position": "Server",
+      "hours": 8.88,
+      "auto_clocked": false
+    },
+    {
+      "name": "Cisneross, Giselle",
+      "position": "Server",
+      "hours": 6.26,
+      "auto_clocked": false
+    },
+    {
+      "name": "Rueda, Jonathan",
+      "position": "Other",
+      "hours": 8.21,
+      "auto_clocked": false
+    },
+    {
+      "name": "CANDELA, OLIVIA",
+      "position": "Other",
+      "hours": 7.79,
+      "auto_clocked": false
+    },
+    {
+      "name": "Luna, Mayra",
+      "position": "Manager",
+      "hours": 8.78,
+      "auto_clocked": false
+    }
+  ],
+  "issues_detected": [
+    "Evening understaffed: 10 vs 16 morning",
+    "2 auto clock-outs"
+  ],
+  "drive_revenue": 0,
+  "lobby_revenue": 15620.46
 }

@@ -4,19 +4,100 @@
   "revenue": 3214.42,
   "orders": 245,
   "guests": 284,
-  "grade": "B",
-  "manager": "Unknown",
-  "auto_clockouts": 0,
+  "grade": "C",
+  "manager": "Salazar, Maria ",
+  "auto_clockouts": 1,
   "morning_shift": {
-    "employees": 10,
-    "orders": 245,
-    "revenue": 3214.42
+    "employees": 12,
+    "revenue": 1928.652,
+    "orders": 147,
+    "avg_speed": 15,
+    "grade": "B"
   },
   "evening_shift": {
     "employees": 0,
-    "orders": 0,
-    "revenue": 0
+    "revenue": 1285.768,
+    "orders": 98,
+    "avg_speed": 15,
+    "grade": "B"
   },
-  "all_employees": [],
-  "issues_detected": []
+  "all_employees": [
+    {
+      "name": "Hernandez, Celinda",
+      "position": "Kitchen",
+      "hours": 9.05,
+      "auto_clocked": false
+    },
+    {
+      "name": "Hernandez, Fidelia ",
+      "position": "Kitchen",
+      "hours": 8.64,
+      "auto_clocked": false
+    },
+    {
+      "name": "Salazar, Maria ",
+      "position": "Manager",
+      "hours": 7.77,
+      "auto_clocked": false
+    },
+    {
+      "name": "Ovalle , Martina",
+      "position": "Drive-Thru",
+      "hours": 7.35,
+      "auto_clocked": false
+    },
+    {
+      "name": "Melendez, Ninoska",
+      "position": "Other",
+      "hours": 15.26,
+      "auto_clocked": false
+    },
+    {
+      "name": "lopez, samantha",
+      "position": "Server",
+      "hours": 5.93,
+      "auto_clocked": false
+    },
+    {
+      "name": "Villalobos , Veronica ",
+      "position": "Kitchen",
+      "hours": 6.74,
+      "auto_clocked": false
+    },
+    {
+      "name": "Martinez , Sami",
+      "position": "Server",
+      "hours": 5.1,
+      "auto_clocked": false
+    },
+    {
+      "name": "C, PM Cashier",
+      "position": "Other",
+      "hours": 7.1,
+      "auto_clocked": false
+    },
+    {
+      "name": "Martinez , Sami",
+      "position": "Server",
+      "hours": 14.78,
+      "auto_clocked": true
+    },
+    {
+      "name": "lopez, samantha",
+      "position": "Drive-Thru",
+      "hours": 7.27,
+      "auto_clocked": false
+    },
+    {
+      "name": "santander, yerlinson",
+      "position": "Kitchen",
+      "hours": 7.31,
+      "auto_clocked": false
+    }
+  ],
+  "issues_detected": [
+    "Evening understaffed: 4 vs 8 morning"
+  ],
+  "drive_revenue": 0,
+  "lobby_revenue": 6428.84
 }

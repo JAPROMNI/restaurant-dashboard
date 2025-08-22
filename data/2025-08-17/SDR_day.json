@@ -4,19 +4,148 @@
   "revenue": 6472.6,
   "orders": 222,
   "guests": 422,
-  "grade": "B",
-  "manager": "Unknown",
+  "grade": "A",
+  "manager": "Del Angel, Candy",
   "auto_clockouts": 0,
   "morning_shift": {
-    "employees": 10,
-    "orders": 222,
-    "revenue": 6472.6
+    "employees": 20,
+    "revenue": 3883.56,
+    "orders": 133,
+    "avg_speed": 15,
+    "grade": "B"
   },
   "evening_shift": {
     "employees": 0,
-    "orders": 0,
-    "revenue": 0
+    "revenue": 2589.0400000000004,
+    "orders": 88,
+    "avg_speed": 15,
+    "grade": "B"
   },
-  "all_employees": [],
-  "issues_detected": []
+  "all_employees": [
+    {
+      "name": "Vega, Estela",
+      "position": "Other",
+      "hours": 10.1,
+      "auto_clocked": false
+    },
+    {
+      "name": "Rosales, Elsa",
+      "position": "Other",
+      "hours": 9.45,
+      "auto_clocked": false
+    },
+    {
+      "name": "Lino Santana, David ",
+      "position": "Other",
+      "hours": 9.07,
+      "auto_clocked": false
+    },
+    {
+      "name": "Cabrera, Sugey",
+      "position": "Server",
+      "hours": 8.43,
+      "auto_clocked": false
+    },
+    {
+      "name": "Ojeda, George",
+      "position": "Other",
+      "hours": 8.67,
+      "auto_clocked": false
+    },
+    {
+      "name": "vanenzuela, felix",
+      "position": "Kitchen",
+      "hours": 8.48,
+      "auto_clocked": false
+    },
+    {
+      "name": "Jimenez, Mario",
+      "position": "Drive-Thru",
+      "hours": 7.55,
+      "auto_clocked": false
+    },
+    {
+      "name": "Del Angel, Candy",
+      "position": "Manager",
+      "hours": 8.1,
+      "auto_clocked": false
+    },
+    {
+      "name": "quiroz, siri",
+      "position": "Other",
+      "hours": 7.35,
+      "auto_clocked": false
+    },
+    {
+      "name": "GUTIERREZ, ERIC",
+      "position": "Kitchen",
+      "hours": 7.85,
+      "auto_clocked": false
+    },
+    {
+      "name": "De los Santos, Mia",
+      "position": "Other",
+      "hours": 6.98,
+      "auto_clocked": false
+    },
+    {
+      "name": "Sanchez, Emanuel",
+      "position": "Manager",
+      "hours": 7.98,
+      "auto_clocked": false
+    },
+    {
+      "name": "Roman, Leticia",
+      "position": "Server",
+      "hours": 8.09,
+      "auto_clocked": false
+    },
+    {
+      "name": "JOSSUETH, FRANLOD",
+      "position": "Other",
+      "hours": 7.91,
+      "auto_clocked": false
+    },
+    {
+      "name": "Morales, Adrian",
+      "position": "Server",
+      "hours": 6.77,
+      "auto_clocked": false
+    },
+    {
+      "name": "Tovar , Gabriel",
+      "position": "Server",
+      "hours": 7.43,
+      "auto_clocked": false
+    },
+    {
+      "name": "velasquez, maximilioano",
+      "position": "Other",
+      "hours": 7.06,
+      "auto_clocked": false
+    },
+    {
+      "name": "Barton, Arion",
+      "position": "Kitchen",
+      "hours": 6.87,
+      "auto_clocked": false
+    },
+    {
+      "name": "Juliet, Mia",
+      "position": "Other",
+      "hours": 5.87,
+      "auto_clocked": false
+    },
+    {
+      "name": "Velasquez, Lisa",
+      "position": "Server",
+      "hours": 6.82,
+      "auto_clocked": false
+    }
+  ],
+  "issues_detected": [
+    "NO EVENING SHIFT"
+  ],
+  "drive_revenue": 0,
+  "lobby_revenue": 12945.2
 }

@@ -4,19 +4,208 @@
   "revenue": 9788.38,
   "orders": 398,
   "guests": 669,
-  "grade": "B",
-  "manager": "Unknown",
+  "grade": "A",
+  "manager": "ORDONEZ, Rosie ",
   "auto_clockouts": 0,
   "morning_shift": {
-    "employees": 10,
-    "orders": 398,
-    "revenue": 9788.38
+    "employees": 30,
+    "revenue": 5873.027999999999,
+    "orders": 238,
+    "avg_speed": 15,
+    "grade": "B"
   },
   "evening_shift": {
     "employees": 0,
-    "orders": 0,
-    "revenue": 0
+    "revenue": 3915.352,
+    "orders": 159,
+    "avg_speed": 15,
+    "grade": "B"
   },
-  "all_employees": [],
-  "issues_detected": []
+  "all_employees": [
+    {
+      "name": "Diaz, Diego",
+      "position": "Kitchen",
+      "hours": 9.09,
+      "auto_clocked": false
+    },
+    {
+      "name": "Gonzales (Line) , Maria",
+      "position": "Kitchen",
+      "hours": 16.39,
+      "auto_clocked": false
+    },
+    {
+      "name": "Aviles, Genaro",
+      "position": "Kitchen",
+      "hours": 8.94,
+      "auto_clocked": false
+    },
+    {
+      "name": "Ramirez Perez, Silvia",
+      "position": "Kitchen",
+      "hours": 8.57,
+      "auto_clocked": false
+    },
+    {
+      "name": "Gonzalez, Maria ",
+      "position": "Other",
+      "hours": 8.68,
+      "auto_clocked": false
+    },
+    {
+      "name": "Alvarado, Rodolfo",
+      "position": "Kitchen",
+      "hours": 8.45,
+      "auto_clocked": false
+    },
+    {
+      "name": "Torres, Daniela",
+      "position": "Drive-Thru",
+      "hours": 7.7,
+      "auto_clocked": false
+    },
+    {
+      "name": "Abundiz, Sergio",
+      "position": "Server",
+      "hours": 16.16,
+      "auto_clocked": false
+    },
+    {
+      "name": "Dominguez, Jose ",
+      "position": "Kitchen",
+      "hours": 7.45,
+      "auto_clocked": false
+    },
+    {
+      "name": "ORDONEZ, Rosie ",
+      "position": "Manager",
+      "hours": 6.45,
+      "auto_clocked": false
+    },
+    {
+      "name": "Brito, Victor ",
+      "position": "Other",
+      "hours": 7.2,
+      "auto_clocked": false
+    },
+    {
+      "name": "Abundiz, Ivana",
+      "position": "Other",
+      "hours": 6.39,
+      "auto_clocked": false
+    },
+    {
+      "name": "Caviedes, Esperansa",
+      "position": "Server",
+      "hours": 6.02,
+      "auto_clocked": false
+    },
+    {
+      "name": "Trevino, Melissa",
+      "position": "Other",
+      "hours": 6.12,
+      "auto_clocked": false
+    },
+    {
+      "name": "huerta, Arturo ",
+      "position": "Other",
+      "hours": 6.19,
+      "auto_clocked": false
+    },
+    {
+      "name": "Alonso, Lizeth",
+      "position": "Other",
+      "hours": 14.16,
+      "auto_clocked": false
+    },
+    {
+      "name": "Compean, Rosa",
+      "position": "Server",
+      "hours": 4.94,
+      "auto_clocked": false
+    },
+    {
+      "name": "Majana, Maria",
+      "position": "Server",
+      "hours": 12.84,
+      "auto_clocked": false
+    },
+    {
+      "name": "Hernandez, Silvia",
+      "position": "Server",
+      "hours": 5.01,
+      "auto_clocked": false
+    },
+    {
+      "name": "Cisneros, Isabel",
+      "position": "Server",
+      "hours": 7.52,
+      "auto_clocked": false
+    },
+    {
+      "name": "Cisneross, Giselle",
+      "position": "Other",
+      "hours": 12.15,
+      "auto_clocked": false
+    },
+    {
+      "name": "Urena, Melissa",
+      "position": "Server",
+      "hours": 5.63,
+      "auto_clocked": false
+    },
+    {
+      "name": "Serrato, Joshua ",
+      "position": "Other",
+      "hours": 5.11,
+      "auto_clocked": false
+    },
+    {
+      "name": "Rueda, Jonathan",
+      "position": "Other",
+      "hours": 12.72,
+      "auto_clocked": false
+    },
+    {
+      "name": "Zuniga, Sebastian",
+      "position": "Kitchen",
+      "hours": 4.47,
+      "auto_clocked": false
+    },
+    {
+      "name": "Luna, Mayra",
+      "position": "Manager",
+      "hours": 12.43,
+      "auto_clocked": false
+    },
+    {
+      "name": "Camacho, Juan ",
+      "position": "Server",
+      "hours": 12.43,
+      "auto_clocked": false
+    },
+    {
+      "name": "ROJAS, JAIME",
+      "position": "Other",
+      "hours": 8.44,
+      "auto_clocked": false
+    },
+    {
+      "name": "CANDELA, OLIVIA",
+      "position": "Other",
+      "hours": 7.88,
+      "auto_clocked": false
+    },
+    {
+      "name": "Calderon, Jesus",
+      "position": "Kitchen",
+      "hours": 7.82,
+      "auto_clocked": false
+    }
+  ],
+  "issues_detected": [
+    "Evening understaffed: 3 vs 27 morning"
+  ],
+  "drive_revenue": 0,
+  "lobby_revenue": 19576.760000000002
 }

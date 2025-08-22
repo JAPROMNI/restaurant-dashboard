@@ -1,27 +1,27 @@
 {
-  "week": 34,
-  "date_range": "2025-08-15 to 2025-08-21",
+  "week": 33,
+  "date_range": "Monday 2025-08-11 to Sunday 2025-08-17",
   "restaurants": [
     {
       "restaurant": "T12",
       "restaurant_name": "Tink-A-Tako #12",
       "current_week": {
-        "revenue": 48789.05,
-        "orders": 2403,
+        "revenue": 46558.24,
+        "orders": 2340,
         "avg_speed": 15.0,
-        "grade": "B"
+        "grade": "A"
       },
       "previous_week": {
-        "revenue": 47577.59999999999,
-        "orders": 2384,
+        "revenue": 49334.46,
+        "orders": 2415,
         "avg_speed": 15.0
       },
       "comparison": {
-        "revenue_change_pct": 2.546261265805782,
+        "revenue_change_pct": -5.627344456592818,
         "speed_change": 0,
         "grade_change": "same"
       },
-      "critical_issues": 0,
+      "critical_issues": 5,
       "rank": 1,
       "rank_emoji": "\ud83e\udd47"
     },
@@ -29,22 +29,22 @@
       "restaurant": "SDR",
       "restaurant_name": "Sandra's Mexican Cuisine",
       "current_week": {
-        "revenue": 35210.87,
-        "orders": 1561,
+        "revenue": 36189.46,
+        "orders": 1598,
         "avg_speed": 15.0,
-        "grade": "B"
+        "grade": "A"
       },
       "previous_week": {
-        "revenue": 36202.020000000004,
-        "orders": 1617,
+        "revenue": 38178.63,
+        "orders": 1629,
         "avg_speed": 15.0
       },
       "comparison": {
-        "revenue_change_pct": -2.7378306514387907,
+        "revenue_change_pct": -5.210166001242052,
         "speed_change": 0,
         "grade_change": "same"
       },
-      "critical_issues": 0,
+      "critical_issues": 6,
       "rank": 2,
       "rank_emoji": "\ud83e\udd48"
     },
@@ -52,22 +52,22 @@
       "restaurant": "TK9",
       "restaurant_name": "Tink-A-Tako #9",
       "current_week": {
-        "revenue": 22945.760000000002,
-        "orders": 1692,
+        "revenue": 24308.08,
+        "orders": 1708,
         "avg_speed": 15.0,
-        "grade": "B"
+        "grade": "C"
       },
       "previous_week": {
-        "revenue": 24747.550000000003,
-        "orders": 1693,
+        "revenue": 25090.96,
+        "orders": 1709,
         "avg_speed": 15.0
       },
       "comparison": {
-        "revenue_change_pct": -7.280680309768041,
+        "revenue_change_pct": -3.1201675822686634,
         "speed_change": 0,
         "grade_change": "same"
       },
-      "critical_issues": 0,
+      "critical_issues": 7,
       "rank": 3,
       "rank_emoji": "\ud83e\udd49"
     }

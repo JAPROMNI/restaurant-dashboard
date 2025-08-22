@@ -2,138 +2,138 @@
   "restaurant": "TK9",
   "restaurant_name": "Tink-A-Tako #9",
   "current_week": {
-    "week_label": "Aug 15 - 21",
+    "week_label": "Mon 08-11 - Sun 08-17",
     "days": [
-      {
-        "date": "2025-08-15",
-        "day_name": "Friday",
-        "revenue": 4027.11,
-        "orders": 295,
-        "grade": "B",
-        "issues_count": 0,
-        "wow_change": 0
-      },
-      {
-        "date": "2025-08-16",
-        "day_name": "Saturday",
-        "revenue": 4210.52,
-        "orders": 262,
-        "grade": "B",
-        "issues_count": 0,
-        "wow_change": 0
-      },
-      {
-        "date": "2025-08-17",
-        "day_name": "Sunday",
-        "revenue": 2945.27,
-        "orders": 168,
-        "grade": "B",
-        "issues_count": 0,
-        "wow_change": 0
-      },
-      {
-        "date": "2025-08-18",
-        "day_name": "Monday",
-        "revenue": 2882.99,
-        "orders": 233,
-        "grade": "B",
-        "issues_count": 0,
-        "wow_change": 0
-      },
-      {
-        "date": "2025-08-19",
-        "day_name": "Tuesday",
-        "revenue": 2868.99,
-        "orders": 228,
-        "grade": "B",
-        "issues_count": 0,
-        "wow_change": 0
-      },
-      {
-        "date": "2025-08-20",
-        "day_name": "Wednesday",
-        "revenue": 2749.7,
-        "orders": 242,
-        "grade": "B",
-        "issues_count": 0,
-        "wow_change": 0
-      },
-      {
-        "date": "2025-08-21",
-        "day_name": "Thursday",
-        "revenue": 3261.18,
-        "orders": 264,
-        "grade": "B",
-        "issues_count": 0,
-        "wow_change": 0
-      }
-    ],
-    "total_revenue": 22945.760000000002,
-    "total_orders": 1692,
-    "avg_speed": 15.0
-  },
-  "previous_week": {
-    "week_label": "Aug 08 - 14",
-    "days": [
-      {
-        "date": "2025-08-08",
-        "day_name": "Friday",
-        "revenue": 3948.76,
-        "orders": 279,
-        "grade": "B",
-        "issues_count": 0
-      },
-      {
-        "date": "2025-08-09",
-        "day_name": "Saturday",
-        "revenue": 4307.6,
-        "orders": 249,
-        "grade": "B",
-        "issues_count": 0
-      },
-      {
-        "date": "2025-08-10",
-        "day_name": "Sunday",
-        "revenue": 3366.01,
-        "orders": 182,
-        "grade": "B",
-        "issues_count": 0
-      },
       {
         "date": "2025-08-11",
         "day_name": "Monday",
         "revenue": 3214.42,
         "orders": 245,
-        "grade": "B",
-        "issues_count": 0
+        "grade": "C",
+        "issues_count": 1,
+        "wow_change": 7.881285680244594
       },
       {
         "date": "2025-08-12",
         "day_name": "Tuesday",
         "revenue": 2918.91,
         "orders": 232,
-        "grade": "B",
-        "issues_count": 0
+        "grade": "D",
+        "issues_count": 1,
+        "wow_change": -2.8480802002343224
       },
       {
         "date": "2025-08-13",
         "day_name": "Wednesday",
         "revenue": 3403.06,
         "orders": 240,
-        "grade": "B",
-        "issues_count": 0
+        "grade": "C",
+        "issues_count": 2,
+        "wow_change": -6.189508737205698
       },
       {
         "date": "2025-08-14",
         "day_name": "Thursday",
         "revenue": 3588.79,
         "orders": 266,
-        "grade": "B",
-        "issues_count": 0
+        "grade": "C",
+        "issues_count": 2,
+        "wow_change": -6.952161434093952
+      },
+      {
+        "date": "2025-08-15",
+        "day_name": "Friday",
+        "revenue": 4027.11,
+        "orders": 295,
+        "grade": "C",
+        "issues_count": 2,
+        "wow_change": 1.9841671815962456
+      },
+      {
+        "date": "2025-08-16",
+        "day_name": "Saturday",
+        "revenue": 4210.52,
+        "orders": 262,
+        "grade": "C",
+        "issues_count": 2,
+        "wow_change": -2.253691150524652
+      },
+      {
+        "date": "2025-08-17",
+        "day_name": "Sunday",
+        "revenue": 2945.27,
+        "orders": 168,
+        "grade": "D",
+        "issues_count": 2,
+        "wow_change": -12.499665776394016
       }
     ],
-    "total_revenue": 24747.550000000003,
-    "total_orders": 1693,
+    "total_revenue": 24308.08,
+    "total_orders": 1708,
+    "avg_speed": 15.0
+  },
+  "previous_week": {
+    "week_label": "Mon 08-04 - Sun 08-10",
+    "days": [
+      {
+        "date": "2025-08-04",
+        "day_name": "Monday",
+        "revenue": 2979.59,
+        "orders": 228,
+        "grade": "D",
+        "issues_count": 2
+      },
+      {
+        "date": "2025-08-05",
+        "day_name": "Tuesday",
+        "revenue": 3004.48,
+        "orders": 239,
+        "grade": "D",
+        "issues_count": 2
+      },
+      {
+        "date": "2025-08-06",
+        "day_name": "Wednesday",
+        "revenue": 3627.59,
+        "orders": 251,
+        "grade": "D",
+        "issues_count": 2
+      },
+      {
+        "date": "2025-08-07",
+        "day_name": "Thursday",
+        "revenue": 3856.93,
+        "orders": 281,
+        "grade": "C",
+        "issues_count": 2
+      },
+      {
+        "date": "2025-08-08",
+        "day_name": "Friday",
+        "revenue": 3948.76,
+        "orders": 279,
+        "grade": "D",
+        "issues_count": 2
+      },
+      {
+        "date": "2025-08-09",
+        "day_name": "Saturday",
+        "revenue": 4307.6,
+        "orders": 249,
+        "grade": "C",
+        "issues_count": 2
+      },
+      {
+        "date": "2025-08-10",
+        "day_name": "Sunday",
+        "revenue": 3366.01,
+        "orders": 182,
+        "grade": "D",
+        "issues_count": 2
+      }
+    ],
+    "total_revenue": 25090.96,
+    "total_orders": 1709,
     "avg_speed": 15.0
   }
 }
