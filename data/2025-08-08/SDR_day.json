@@ -1,16 +1,16 @@
 {
-  "date": "2025-08-13",
-  "restaurant": "T12",
-  "revenue": 5444.14,
-  "orders": 327,
-  "guests": 444,
+  "date": "2025-08-08",
+  "restaurant": "SDR",
+  "revenue": 4990.44,
+  "orders": 227,
+  "guests": 355,
   "grade": "B",
   "manager": "Unknown",
   "auto_clockouts": 0,
   "morning_shift": {
     "employees": 10,
-    "orders": 327,
-    "revenue": 5444.14
+    "orders": 227,
+    "revenue": 4990.44
   },
   "evening_shift": {
     "employees": 0,

@@ -1,16 +1,16 @@
 {
-  "date": "2025-08-13",
+  "date": "2025-08-08",
   "restaurant": "T12",
-  "revenue": 5444.14,
-  "orders": 327,
-  "guests": 444,
+  "revenue": 8216.88,
+  "orders": 396,
+  "guests": 574,
   "grade": "B",
   "manager": "Unknown",
   "auto_clockouts": 0,
   "morning_shift": {
     "employees": 10,
-    "orders": 327,
-    "revenue": 5444.14
+    "orders": 396,
+    "revenue": 8216.88
   },
   "evening_shift": {
     "employees": 0,

@@ -2,17 +2,138 @@
   "restaurant": "SDR",
   "restaurant_name": "Sandra's Mexican Cuisine",
   "current_week": {
-    "week_label": "Week of 2025-08-16",
-    "days": [],
-    "total_revenue": 0,
-    "total_orders": 0,
-    "avg_speed": 0
+    "week_label": "Aug 15 - 21",
+    "days": [
+      {
+        "date": "2025-08-15",
+        "day_name": "Friday",
+        "revenue": 6071.19,
+        "orders": 258,
+        "grade": "B",
+        "issues_count": 0,
+        "wow_change": 0
+      },
+      {
+        "date": "2025-08-16",
+        "day_name": "Saturday",
+        "revenue": 7255.93,
+        "orders": 313,
+        "grade": "B",
+        "issues_count": 0,
+        "wow_change": 0
+      },
+      {
+        "date": "2025-08-17",
+        "day_name": "Sunday",
+        "revenue": 6472.6,
+        "orders": 222,
+        "grade": "B",
+        "issues_count": 0,
+        "wow_change": 0
+      },
+      {
+        "date": "2025-08-18",
+        "day_name": "Monday",
+        "revenue": 3687.67,
+        "orders": 178,
+        "grade": "B",
+        "issues_count": 0,
+        "wow_change": 0
+      },
+      {
+        "date": "2025-08-19",
+        "day_name": "Tuesday",
+        "revenue": 3516.36,
+        "orders": 193,
+        "grade": "B",
+        "issues_count": 0,
+        "wow_change": 0
+      },
+      {
+        "date": "2025-08-20",
+        "day_name": "Wednesday",
+        "revenue": 3903.31,
+        "orders": 188,
+        "grade": "B",
+        "issues_count": 0,
+        "wow_change": 0
+      },
+      {
+        "date": "2025-08-21",
+        "day_name": "Thursday",
+        "revenue": 4303.81,
+        "orders": 209,
+        "grade": "B",
+        "issues_count": 0,
+        "wow_change": 0
+      }
+    ],
+    "total_revenue": 35210.87,
+    "total_orders": 1561,
+    "avg_speed": 15.0
   },
   "previous_week": {
-    "week_label": "Week of 2025-08-09",
-    "days": [],
-    "total_revenue": 0,
-    "total_orders": 0,
-    "avg_speed": 0
+    "week_label": "Aug 08 - 14",
+    "days": [
+      {
+        "date": "2025-08-08",
+        "day_name": "Friday",
+        "revenue": 4990.44,
+        "orders": 227,
+        "grade": "B",
+        "issues_count": 0
+      },
+      {
+        "date": "2025-08-09",
+        "day_name": "Saturday",
+        "revenue": 7591.18,
+        "orders": 319,
+        "grade": "B",
+        "issues_count": 0
+      },
+      {
+        "date": "2025-08-10",
+        "day_name": "Sunday",
+        "revenue": 7230.66,
+        "orders": 266,
+        "grade": "B",
+        "issues_count": 0
+      },
+      {
+        "date": "2025-08-11",
+        "day_name": "Monday",
+        "revenue": 4487.89,
+        "orders": 227,
+        "grade": "B",
+        "issues_count": 0
+      },
+      {
+        "date": "2025-08-12",
+        "day_name": "Tuesday",
+        "revenue": 3420.68,
+        "orders": 172,
+        "grade": "B",
+        "issues_count": 0
+      },
+      {
+        "date": "2025-08-13",
+        "day_name": "Wednesday",
+        "revenue": 3839.15,
+        "orders": 185,
+        "grade": "B",
+        "issues_count": 0
+      },
+      {
+        "date": "2025-08-14",
+        "day_name": "Thursday",
+        "revenue": 4642.02,
+        "orders": 221,
+        "grade": "B",
+        "issues_count": 0
+      }
+    ],
+    "total_revenue": 36202.020000000004,
+    "total_orders": 1617,
+    "avg_speed": 15.0
   }
 }

@@ -1,23 +1,23 @@
 {
   "week": 34,
-  "date_range": "2025-08-16 to 2025-08-22",
+  "date_range": "2025-08-15 to 2025-08-21",
   "restaurants": [
     {
-      "restaurant": "SDR",
-      "restaurant_name": "Sandra's Mexican Cuisine",
+      "restaurant": "T12",
+      "restaurant_name": "Tink-A-Tako #12",
       "current_week": {
-        "revenue": 0,
-        "orders": 0,
-        "avg_speed": 0,
-        "grade": "A"
+        "revenue": 48789.05,
+        "orders": 2403,
+        "avg_speed": 15.0,
+        "grade": "B"
       },
       "previous_week": {
-        "revenue": 0,
-        "orders": 0,
-        "avg_speed": 0
+        "revenue": 47577.59999999999,
+        "orders": 2384,
+        "avg_speed": 15.0
       },
       "comparison": {
-        "revenue_change_pct": 0,
+        "revenue_change_pct": 2.546261265805782,
         "speed_change": 0,
         "grade_change": "same"
       },
@@ -26,21 +26,21 @@
       "rank_emoji": "\ud83e\udd47"
     },
     {
-      "restaurant": "TK9",
-      "restaurant_name": "Tink-A-Tako #9",
+      "restaurant": "SDR",
+      "restaurant_name": "Sandra's Mexican Cuisine",
       "current_week": {
-        "revenue": 0,
-        "orders": 0,
-        "avg_speed": 0,
-        "grade": "A"
+        "revenue": 35210.87,
+        "orders": 1561,
+        "avg_speed": 15.0,
+        "grade": "B"
       },
       "previous_week": {
-        "revenue": 0,
-        "orders": 0,
-        "avg_speed": 0
+        "revenue": 36202.020000000004,
+        "orders": 1617,
+        "avg_speed": 15.0
       },
       "comparison": {
-        "revenue_change_pct": 0,
+        "revenue_change_pct": -2.7378306514387907,
         "speed_change": 0,
         "grade_change": "same"
       },
@@ -49,21 +49,21 @@
       "rank_emoji": "\ud83e\udd48"
     },
     {
-      "restaurant": "T12",
-      "restaurant_name": "Tink-A-Tako #12",
+      "restaurant": "TK9",
+      "restaurant_name": "Tink-A-Tako #9",
       "current_week": {
-        "revenue": 0,
-        "orders": 0,
-        "avg_speed": 0,
-        "grade": "A"
+        "revenue": 22945.760000000002,
+        "orders": 1692,
+        "avg_speed": 15.0,
+        "grade": "B"
       },
       "previous_week": {
-        "revenue": 0,
-        "orders": 0,
-        "avg_speed": 0
+        "revenue": 24747.550000000003,
+        "orders": 1693,
+        "avg_speed": 15.0
       },
       "comparison": {
-        "revenue_change_pct": 0,
+        "revenue_change_pct": -7.280680309768041,
         "speed_change": 0,
         "grade_change": "same"
       },
