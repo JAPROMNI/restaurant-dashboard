@@ -23,7 +23,7 @@
             margin: 0 auto;
         }
 
-        /* Level 1: Overview */
+        /* Level 1: Overview - ORIGINAL CLEAN STYLE */
         .overview-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -49,19 +49,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .restaurant-name {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: #1a1a1a;
         }
 
         .restaurant-grade {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            padding: 5px 15px;
+            padding: 5px 12px;
             border-radius: 10px;
         }
 
@@ -71,78 +71,71 @@
         .grade-D { background: #ef4444; color: white; }
         .grade-F { background: #991b1b; color: white; }
 
-        .metric-row {
+        /* Simplified metrics */
+        .key-metrics {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
+            margin: 15px 0;
+            padding: 15px 0;
+            border-top: 1px solid #e5e7eb;
             border-bottom: 1px solid #e5e7eb;
         }
 
-        .metric-label {
-            color: #6b7280;
-            font-size: 0.9rem;
+        .metric {
+            text-align: center;
         }
 
         .metric-value {
-            font-weight: 600;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: #1a1a1a;
         }
 
-        .change {
-            font-size: 0.85rem;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-left: 10px;
+        .metric-label {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 2px;
         }
 
-        .positive { 
-            background: #d1fae5; 
-            color: #065f46;
-        }
-
-        .negative { 
-            background: #fee2e2; 
-            color: #991b1b;
-        }
-
-        /* Level 2: Week View */
-        .week-toggle {
+        .change-indicator {
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        .change-item {
+            font-size: 0.9rem;
+        }
+
+        .positive { color: #10b981; }
+        .negative { color: #ef4444; }
+
+        /* Level 2: Week View - ORDERED MON-SUN */
+        .week-container {
             background: rgba(255, 255, 255, 0.1);
-            padding: 5px;
-            border-radius: 10px;
-            width: fit-content;
+            border-radius: 20px;
+            padding: 20px;
         }
 
-        .week-toggle button {
-            padding: 10px 20px;
-            border: none;
-            background: transparent;
+        .week-header {
             color: white;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s ease;
-        }
-
-        .week-toggle button.active {
-            background: rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .days-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
         }
 
         .day-card {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 15px;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
+            text-align: center;
         }
 
         .day-card:hover {
@@ -152,84 +145,37 @@
         .day-name {
             font-weight: 700;
             color: #1a1a1a;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
         }
 
-        .revenue {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #10b981;
-            margin-bottom: 5px;
-        }
-
-        /* Level 3: Day Detail */
-        .shift-section {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-        }
-
-        .shift-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e5e7eb;
-        }
-
-        .shift-title {
+        .day-revenue {
             font-size: 1.3rem;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #10b981;
         }
 
-        .employee-list {
-            display: grid;
-            gap: 10px;
-        }
-
-        .employee-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 10px;
-            padding: 10px;
-            background: #f9fafb;
-            border-radius: 8px;
-        }
-
-        .issues-section {
-            background: #fee2e2;
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        .issue-item {
-            padding: 10px;
-            background: white;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border-left: 4px solid #ef4444;
+        .day-stats {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 5px;
         }
 
         /* Navigation */
         .nav-buttons {
             display: flex;
             gap: 10px;
-            margin: 20px 0;
+            margin-bottom: 20px;
         }
 
         .nav-button {
-            padding: 12px 24px;
+            padding: 10px 20px;
             background: rgba(255, 255, 255, 0.2);
             border: 2px solid white;
             color: white;
             border-radius: 10px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: background 0.3s ease;
         }
 
@@ -237,37 +183,130 @@
             background: rgba(255, 255, 255, 0.3);
         }
 
-        /* Loading state */
-        .loading {
-            text-align: center;
-            padding: 50px;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        /* Error state */
-        .error {
-            background: #fee2e2;
-            color: #991b1b;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-
-        /* Mobile responsiveness */
+        /* MOBILE STYLES - CHAT-LIKE VERTICAL LAYOUT */
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 0;
+            }
+            
+            /* Level 1 Mobile - Vertical cards */
             .overview-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
             }
             
+            .restaurant-card {
+                border-radius: 15px;
+                padding: 20px;
+            }
+            
+            .restaurant-header {
+                margin-bottom: 10px;
+            }
+            
+            .restaurant-name {
+                font-size: 1.1rem;
+            }
+            
+            .restaurant-grade {
+                font-size: 1.5rem;
+                padding: 4px 10px;
+            }
+            
+            /* Level 2 Mobile - Vertical list */
             .days-grid {
                 grid-template-columns: 1fr;
+                gap: 10px;
             }
             
-            .employee-row {
-                grid-template-columns: 1fr;
-                gap: 5px;
+            .day-card {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+                text-align: left;
             }
+            
+            .day-info {
+                flex: 1;
+            }
+            
+            .day-name {
+                font-size: 1rem;
+                margin-bottom: 5px;
+            }
+            
+            .day-revenue {
+                font-size: 1.2rem;
+            }
+            
+            .day-grade-mobile {
+                font-size: 1.3rem;
+                font-weight: bold;
+                padding: 8px 12px;
+                border-radius: 8px;
+                background: #f3f4f6;
+            }
+            
+            /* Chat-like message bubbles for issues */
+            .issue-bubble {
+                background: #fee2e2;
+                border-radius: 18px;
+                padding: 12px 16px;
+                margin: 10px 0;
+                border-left: 3px solid #ef4444;
+            }
+            
+            /* Mobile navigation */
+            .nav-buttons {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 10px;
+                flex-direction: row;
+                justify-content: space-around;
+                margin: 0;
+                z-index: 100;
+            }
+            
+            .nav-button {
+                padding: 8px 15px;
+                font-size: 0.85rem;
+                border: 1px solid white;
+            }
+            
+            /* Add padding to bottom for fixed nav */
+            body {
+                padding-bottom: 70px;
+            }
+        }
+
+        /* Week toggle buttons */
+        .week-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .week-toggle button {
+            padding: 10px 20px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .week-toggle button.active {
+            background: rgba(255, 255, 255, 0.4);
         }
     </style>
 </head>
@@ -275,46 +314,40 @@
     <div class="container">
         <!-- Level 1: Overview -->
         <div id="level1" style="display: block;">
-            <h1 style="color: white; margin-bottom: 30px; text-align: center;">📊 Weekly Restaurant Overview</h1>
+            <h1 style="color: white; margin-bottom: 30px; text-align: center;">Weekly Overview</h1>
             <div class="overview-grid" id="overviewGrid">
-                <div class="loading">Loading restaurants...</div>
+                <div class="loading" style="color: white; text-align: center;">Loading...</div>
             </div>
         </div>
 
         <!-- Level 2: Restaurant Week -->
         <div id="level2" style="display: none;">
             <div class="nav-buttons">
-                <button class="nav-button" onclick="showLevel(1)">← Back to Overview</button>
+                <button class="nav-button" onclick="showLevel(1)">← Back</button>
             </div>
-            <div class="week-toggle">
-                <button class="active" onclick="showWeek('current')">Current Week</button>
-                <button onclick="showWeek('previous')">Previous Week</button>
-            </div>
-            <div id="weekContent">
-                <div class="loading">Loading week data...</div>
+            
+            <div class="week-container">
+                <h2 class="week-header" id="weekHeader">Loading...</h2>
+                
+                <div class="week-toggle">
+                    <button class="active" onclick="showWeek('current')">Current Week</button>
+                    <button onclick="showWeek('previous')">Previous Week</button>
+                </div>
+                
+                <div class="days-grid" id="daysGrid">
+                    <!-- Days will be inserted here -->
+                </div>
             </div>
         </div>
 
         <!-- Level 3: Day Detail -->
         <div id="level3" style="display: none;">
             <div class="nav-buttons">
-                <button class="nav-button" onclick="showLevel(2)">← Back to Week</button>
-                <button class="nav-button" onclick="showLevel(1)">↖ Overview</button>
+                <button class="nav-button" onclick="showLevel(2)">← Back</button>
+                <button class="nav-button" onclick="showLevel(1)">⌂ Home</button>
             </div>
-            <div id="dayContent">
-                <div class="loading">Loading day details...</div>
-            </div>
-        </div>
-
-        <!-- Level 4: Employee Details -->
-        <div id="level4" style="display: none;">
-            <div class="nav-buttons">
-                <button class="nav-button" onclick="showLevel(3)">← Back to Day</button>
-                <button class="nav-button" onclick="showLevel(2)">↖ Week View</button>
-                <button class="nav-button" onclick="showLevel(1)">⌂ Overview</button>
-            </div>
-            <div id="employeeContent">
-                <div class="loading">Loading employee details...</div>
+            <div id="dayContent" style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 25px;">
+                <!-- Day details will be inserted here -->
             </div>
         </div>
     </div>
@@ -326,97 +359,84 @@
         let selectedDate = null;
         let overviewData = null;
         let restaurantWeekData = {};
-        let dayDetailData = {};
+        let currentWeekType = 'current';
+
+        // Day order (Monday to Sunday)
+        const DAY_ORDER = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             loadOverview();
+            
+            // Check if mobile
+            if (window.innerWidth <= 768) {
+                document.body.classList.add('mobile');
+            }
         });
 
         // Show/hide levels
         function showLevel(level) {
-            // Hide all levels
-            for (let i = 1; i <= 4; i++) {
+            for (let i = 1; i <= 3; i++) {
                 document.getElementById(`level${i}`).style.display = 'none';
             }
-            // Show selected level
             document.getElementById(`level${level}`).style.display = 'block';
             currentLevel = level;
         }
 
-        // Load Overview (Level 1) - UPDATED FOR YOUR JSON FORMAT
+        // Load Overview (Level 1)
         async function loadOverview() {
             try {
                 const response = await fetch('data/weekly_overview.json');
-                if (!response.ok) throw new Error('Failed to load overview');
-                
                 overviewData = await response.json();
                 displayOverview();
             } catch (error) {
-                console.error('Error loading overview:', error);
-                document.getElementById('overviewGrid').innerHTML = `
-                    <div class="error">
-                        <h3>Error Loading Data</h3>
-                        <p>${error.message}</p>
-                        <p>Please ensure JSON files are in the /data folder</p>
-                    </div>
-                `;
+                console.error('Error:', error);
+                document.getElementById('overviewGrid').innerHTML = 
+                    '<div style="color: white; text-align: center;">Error loading data</div>';
             }
         }
 
-        // Display Overview - UPDATED FOR YOUR JSON FORMAT
+        // Display Overview - CLEAN ORIGINAL STYLE
         function displayOverview() {
             const container = document.getElementById('overviewGrid');
             let html = '';
             
-            // Your JSON has restaurants as an array, already sorted by rank
             overviewData.restaurants.forEach((data) => {
-                const gradeClass = `grade-${data.current_week.grade.replace('+', '').replace('-', '')}`;
-                const changeClass = data.comparison.revenue_change_pct < 0 ? 'negative' : 'positive';
-                const changeSymbol = data.comparison.revenue_change_pct < 0 ? '📉' : '📈';
-                const medal = data.rank_emoji;
+                const grade = data.current_week.grade;
+                const gradeClass = `grade-${grade.replace('+', '').replace('-', '')}`;
+                const revenueChange = data.comparison.revenue_change_pct;
+                const speedChange = data.comparison.speed_change;
                 
                 html += `
                     <div class="restaurant-card" onclick="selectRestaurant('${data.restaurant}')">
                         <div class="restaurant-header">
-                            <div class="restaurant-name">${medal} ${data.restaurant_name}</div>
-                            <div class="restaurant-grade ${gradeClass}">${data.current_week.grade}</div>
+                            <div class="restaurant-name">${data.rank_emoji} ${data.restaurant_name}</div>
+                            <div class="restaurant-grade ${gradeClass}">${grade}</div>
                         </div>
                         
-                        <div class="metric-row">
-                            <span class="metric-label">Revenue</span>
-                            <span class="metric-value">
-                                $${data.current_week.revenue.toLocaleString()}
-                                <span class="change ${changeClass}">
-                                    ${changeSymbol} ${Math.abs(data.comparison.revenue_change_pct).toFixed(1)}%
-                                </span>
-                            </span>
-                        </div>
-                        
-                        <div class="metric-row">
-                            <span class="metric-label">Orders</span>
-                            <span class="metric-value">${data.current_week.orders.toLocaleString()}</span>
-                        </div>
-                        
-                        <div class="metric-row">
-                            <span class="metric-label">Avg Speed</span>
-                            <span class="metric-value">
-                                ${data.current_week.avg_speed.toFixed(1)} min
-                                ${data.comparison.speed_change !== 0 ? `
-                                    <span class="change ${data.comparison.speed_change < 0 ? 'positive' : 'negative'}">
-                                        ${data.comparison.speed_change > 0 ? '+' : ''}${data.comparison.speed_change.toFixed(1)}
-                                    </span>
-                                ` : ''}
-                            </span>
-                        </div>
-                        
-                        ${data.comparison.grade_change === 'declined' ? `
-                            <div style="margin-top: 15px; padding: 10px; background: #fee2e2; border-radius: 8px;">
-                                <span style="color: #ef4444; font-weight: 600;">
-                                    ⚠️ Grade declined from ${data.previous_week.grade}
-                                </span>
+                        <div class="key-metrics">
+                            <div class="metric">
+                                <div class="metric-value">$${(data.current_week.revenue/1000).toFixed(1)}k</div>
+                                <div class="metric-label">Revenue</div>
                             </div>
-                        ` : ''}
+                            <div class="metric">
+                                <div class="metric-value">${data.current_week.orders}</div>
+                                <div class="metric-label">Orders</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">${data.current_week.avg_speed.toFixed(1)}</div>
+                                <div class="metric-label">Avg Min</div>
+                            </div>
+                        </div>
+                        
+                        <div class="change-indicator">
+                            <div class="change-item ${revenueChange >= 0 ? 'positive' : 'negative'}">
+                                ${revenueChange >= 0 ? '📈' : '📉'} ${Math.abs(revenueChange).toFixed(1)}%
+                            </div>
+                            <div class="change-item ${speedChange <= 0 ? 'positive' : 'negative'}">
+                                ⏱️ ${speedChange > 0 ? '+' : ''}${speedChange.toFixed(1)}min
+                            </div>
+                        </div>
                     </div>
                 `;
             });
@@ -424,341 +444,151 @@
             container.innerHTML = html;
         }
 
-        // Select Restaurant (go to Level 2) - UPDATED
+        // Select Restaurant (Level 2)
         async function selectRestaurant(restaurantId) {
             selectedRestaurant = restaurantId;
             showLevel(2);
             
             try {
                 const response = await fetch(`data/${restaurantId}_week.json`);
-                if (!response.ok) throw new Error('Failed to load restaurant week');
-                
                 restaurantWeekData[restaurantId] = await response.json();
                 showWeek('current');
             } catch (error) {
-                console.error('Error loading restaurant week:', error);
-                document.getElementById('weekContent').innerHTML = `
-                    <div class="error">
-                        <h3>Error Loading Week Data</h3>
-                        <p>${error.message}</p>
-                        <p>Looking for: data/${restaurantId}_week.json</p>
-                    </div>
-                `;
+                console.error('Error:', error);
             }
         }
 
-        // Show Week (Level 2) - UPDATED FOR YOUR JSON
+        // Show Week - MONDAY TO SUNDAY ORDER
         function showWeek(weekType) {
             const data = restaurantWeekData[selectedRestaurant];
             if (!data) return;
             
+            currentWeekType = weekType;
+            
             // Update toggle buttons
             document.querySelectorAll('.week-toggle button').forEach(btn => {
                 btn.classList.remove('active');
-                if ((weekType === 'current' && btn.textContent.includes('Current')) ||
-                    (weekType === 'previous' && btn.textContent.includes('Previous'))) {
-                    btn.classList.add('active');
-                }
             });
+            event.target.classList.add('active');
             
             const weekData = weekType === 'current' ? data.current_week : data.previous_week;
-            const container = document.getElementById('weekContent');
+            document.getElementById('weekHeader').textContent = 
+                `${data.restaurant_name} - ${weekData.week_label}`;
             
-            let html = `<h2 style="color: white; margin-bottom: 20px;">${weekData.week_label} - ${data.restaurant_name}</h2>`;
-            html += `<div class="days-grid">`;
-            
-            weekData.days.forEach(day => {
-                const changeClass = day.wow_change > 0 ? 'positive' : 'negative';
-                const changeSymbol = day.wow_change > 0 ? '📈' : '📉';
-                
-                html += `
-                    <div class="day-card" onclick="selectDay('${day.date}')">
-                        <div class="day-name">${day.day_name}</div>
-                        <div class="revenue">$${(day.revenue/1000).toFixed(1)}k</div>
-                        <div style="color: #666; margin: 10px 0;">
-                            ${day.orders} orders • Grade: ${day.grade}
-                        </div>
-                        ${weekType === 'current' && day.wow_change !== undefined ? `
-                            <div class="change ${changeClass}">
-                                ${changeSymbol} ${Math.abs(day.wow_change).toFixed(1)}% vs last week
-                            </div>
-                        ` : ''}
-                        ${day.issues_count > 0 ? `
-                            <div style="color: #ef4444; margin-top: 10px;">
-                                ⚠️ ${day.issues_count} issues
-                            </div>
-                        ` : ''}
-                    </div>
-                `;
+            // Sort days by day order (Monday to Sunday)
+            const sortedDays = [...weekData.days].sort((a, b) => {
+                const dayA = DAY_ORDER.indexOf(a.day_name);
+                const dayB = DAY_ORDER.indexOf(b.day_name);
+                return dayA - dayB;
             });
             
-            html += '</div>';
+            const container = document.getElementById('daysGrid');
+            let html = '';
             
-            // Add week summary
-            html += `
-                <div style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; padding: 20px; margin-top: 20px;">
-                    <h3 style="color: #1a1a1a; margin-bottom: 15px;">Week Summary</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
-                        <div>
-                            <div style="color: #666; font-size: 0.9rem;">Total Revenue</div>
-                            <div style="font-size: 1.5rem; font-weight: 700; color: #10b981;">
-                                $${weekData.total_revenue.toLocaleString()}
+            // Check if mobile
+            const isMobile = window.innerWidth <= 768;
+            
+            sortedDays.forEach(day => {
+                if (isMobile) {
+                    // Mobile layout - horizontal cards
+                    html += `
+                        <div class="day-card" onclick="selectDay('${day.date}')">
+                            <div class="day-info">
+                                <div class="day-name">${day.day_name}</div>
+                                <div class="day-revenue">$${(day.revenue/1000).toFixed(1)}k</div>
+                                <div class="day-stats">${day.orders} orders</div>
+                            </div>
+                            <div class="day-grade-mobile grade-${day.grade.replace('+', '').replace('-', '')}">
+                                ${day.grade}
                             </div>
                         </div>
-                        <div>
-                            <div style="color: #666; font-size: 0.9rem;">Total Orders</div>
-                            <div style="font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">
-                                ${weekData.total_orders.toLocaleString()}
-                            </div>
+                    `;
+                } else {
+                    // Desktop layout - vertical cards
+                    html += `
+                        <div class="day-card" onclick="selectDay('${day.date}')">
+                            <div class="day-name">${day.day_name.substring(0, 3)}</div>
+                            <div class="day-revenue">$${(day.revenue/1000).toFixed(1)}k</div>
+                            <div class="day-stats">${day.orders} • ${day.grade}</div>
+                            ${day.wow_change !== undefined && weekType === 'current' ? `
+                                <div class="${day.wow_change >= 0 ? 'positive' : 'negative'}" style="margin-top: 5px; font-size: 0.8rem;">
+                                    ${day.wow_change >= 0 ? '↑' : '↓'} ${Math.abs(day.wow_change).toFixed(0)}%
+                                </div>
+                            ` : ''}
                         </div>
-                        <div>
-                            <div style="color: #666; font-size: 0.9rem;">Avg Speed</div>
-                            <div style="font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">
-                                ${weekData.avg_speed.toFixed(1)} min
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
+                    `;
+                }
+            });
             
             container.innerHTML = html;
         }
 
-        // Select Day (go to Level 3)
+        // Select Day (Level 3)
         async function selectDay(date) {
             selectedDate = date;
             showLevel(3);
             
-            const cacheKey = `${selectedRestaurant}_${date}`;
-            
             try {
-                // Check cache first
-                if (!dayDetailData[cacheKey]) {
-                    const response = await fetch(`data/${date}/${selectedRestaurant}_day.json`);
-                    if (!response.ok) throw new Error('Failed to load day details');
-                    dayDetailData[cacheKey] = await response.json();
-                }
-                
-                displayDayDetail(dayDetailData[cacheKey]);
+                const response = await fetch(`data/${date}/${selectedRestaurant}_day.json`);
+                const dayData = await response.json();
+                displayDayDetail(dayData);
             } catch (error) {
-                console.error('Error loading day details:', error);
-                document.getElementById('dayContent').innerHTML = `
-                    <div class="error">
-                        <h3>Error Loading Day Details</h3>
-                        <p>${error.message}</p>
-                        <p>Looking for: data/${date}/${selectedRestaurant}_day.json</p>
-                    </div>
-                `;
+                console.error('Error:', error);
+                document.getElementById('dayContent').innerHTML = 'Error loading day details';
             }
         }
 
-        // Display Day Detail (Level 3)
+        // Display Day Detail (simplified)
         function displayDayDetail(data) {
             const container = document.getElementById('dayContent');
-            const gradeClass = `grade-${data.grade.replace('+', '').replace('-', '')}`;
             
-            let html = `
-                <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 25px; margin-bottom: 20px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                        <h2 style="color: #1a1a1a;">${data.restaurant} - ${data.day_name}</h2>
-                        <div class="restaurant-grade ${gradeClass}">${data.grade}</div>
-                    </div>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                        <div>
-                            <div class="metric-label">Revenue</div>
-                            <div class="metric-value">$${data.revenue.toLocaleString()}</div>
-                        </div>
-                        <div>
-                            <div class="metric-label">Orders</div>
-                            <div class="metric-value">${data.orders}</div>
-                        </div>
-                        <div>
-                            <div class="metric-label">Drive-Thru</div>
-                            <div class="metric-value">$${data.drive_revenue.toLocaleString()} (${((data.drive_revenue/data.revenue)*100).toFixed(0)}%)</div>
-                        </div>
-                        <div>
-                            <div class="metric-label">Lobby</div>
-                            <div class="metric-value">$${data.lobby_revenue.toLocaleString()} (${((data.lobby_revenue/data.revenue)*100).toFixed(0)}%)</div>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
-                        <div style="color: #666;">Manager: ${data.manager} • Auto Clock-outs: ${data.auto_clockouts}</div>
-                    </div>
-                </div>
-            `;
-            
-            // Morning Shift
-            if (data.morning_shift && data.morning_shift.employees > 0) {
-                html += `
-                    <div class="shift-section">
-                        <div class="shift-header">
-                            <div class="shift-title">☀️ Morning Shift (6am-2pm)</div>
-                            <div>${data.morning_shift.employees} employees • ${data.morning_shift.orders} orders</div>
-                        </div>
-                        
-                        <div class="employee-list">
-                            <div class="employee-row" style="background: #e5e7eb; font-weight: 600;">
-                                <div>Employee</div>
-                                <div>Orders</div>
-                                <div>Avg Speed</div>
-                                <div>Grade</div>
-                            </div>
-                `;
-                
-                // Add drive-thru employees
-                if (data.morning_shift.roster && data.morning_shift.roster.drive_thru) {
-                    html += `<div style="margin: 10px 0; font-weight: 600; color: #666;">🚗 Drive-Thru</div>`;
-                    data.morning_shift.roster.drive_thru.forEach(emp => {
-                        html += `
-                            <div class="employee-row">
-                                <div>${emp.name}</div>
-                                <div>${emp.orders}</div>
-                                <div>${emp.avg_time.toFixed(1)} min</div>
-                                <div>${emp.grade}</div>
-                            </div>
-                        `;
-                    });
+            // Calculate drive/lobby split
+            let driveRevenue = 0, lobbyRevenue = 0;
+            data.all_employees.forEach(emp => {
+                if (emp.position === 'Drive-Thru') {
+                    driveRevenue += emp.orders_served * 15;
+                } else {
+                    lobbyRevenue += emp.orders_served * 15;
                 }
-                
-                // Add lobby employees
-                if (data.morning_shift.roster && data.morning_shift.roster.lobby) {
-                    html += `<div style="margin: 10px 0; font-weight: 600; color: #666;">🏪 Lobby</div>`;
-                    data.morning_shift.roster.lobby.forEach(emp => {
-                        html += `
-                            <div class="employee-row">
-                                <div>${emp.name}</div>
-                                <div>${emp.orders}</div>
-                                <div>${emp.avg_time.toFixed(1)} min</div>
-                                <div>${emp.grade}</div>
-                            </div>
-                        `;
-                    });
-                }
-                
-                // Add kitchen summary
-                if (data.morning_shift.roster && data.morning_shift.roster.kitchen && data.morning_shift.roster.kitchen.length > 0) {
-                    html += `
-                        <div style="margin-top: 20px; padding: 15px; background: #f3f4f6; border-radius: 8px;">
-                            <div style="font-weight: 600; color: #666; margin-bottom: 10px;">🍳 Kitchen (${data.morning_shift.roster.kitchen.length} staff)</div>
-                            <div>Grade: ${data.morning_shift.grade} • Avg Speed: ${data.morning_shift.avg_time.toFixed(1)} min</div>
-                        </div>
-                    `;
-                }
-                
-                html += `</div></div>`;
-            }
-            
-            // Evening Shift
-            if (data.evening_shift && data.evening_shift.employees > 0) {
-                html += `
-                    <div class="shift-section">
-                        <div class="shift-header">
-                            <div class="shift-title">🌙 Evening Shift (2pm-10pm)</div>
-                            <div>${data.evening_shift.employees} employees • ${data.evening_shift.orders} orders</div>
-                        </div>
-                        
-                        <div class="employee-list">
-                `;
-                
-                // Similar structure for evening shift...
-                html += `</div></div>`;
-            }
-            
-            // Issues Section
-            if (data.issues_detected && data.issues_detected.length > 0) {
-                html += `
-                    <div class="issues-section">
-                        <h3 style="color: #ef4444; margin-bottom: 15px;">🚨 Issues Detected</h3>
-                `;
-                
-                data.issues_detected.forEach(issue => {
-                    html += `<div class="issue-item">${issue}</div>`;
-                });
-                
-                html += `</div>`;
-            }
-            
-            // View All Employees Button
-            html += `
-                <div style="margin-top: 20px;">
-                    <button class="nav-button" style="background: white; color: #667eea; border-color: #667eea;" 
-                            onclick="showEmployees()">
-                        View All ${data.all_employees ? data.all_employees.length : '0'} Employees
-                    </button>
-                </div>
-            `;
-            
-            container.innerHTML = html;
-        }
-
-        // Show Employees (Level 4)
-        function showEmployees() {
-            showLevel(4);
-            const cacheKey = `${selectedRestaurant}_${selectedDate}`;
-            const data = dayDetailData[cacheKey];
-            
-            if (!data || !data.all_employees) {
-                document.getElementById('employeeContent').innerHTML = `
-                    <div class="error">No employee data available</div>
-                `;
-                return;
-            }
-            
-            const container = document.getElementById('employeeContent');
-            let html = `
-                <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 25px;">
-                    <h2 style="color: #1a1a1a; margin-bottom: 20px;">
-                        All Employees - ${data.restaurant} - ${data.day_name}
-                    </h2>
-                    
-                    <div class="employee-list">
-                        <div class="employee-row" style="background: #374151; color: white; font-weight: 600;">
-                            <div>Employee</div>
-                            <div>Position</div>
-                            <div>Orders</div>
-                            <div>Avg Speed</div>
-                        </div>
-            `;
-            
-            // Sort employees by orders served (descending)
-            const sortedEmployees = [...data.all_employees].sort((a, b) => b.orders_served - a.orders_served);
-            
-            sortedEmployees.forEach(emp => {
-                const gradeClass = emp.grade === 'A' ? 'positive' : 
-                                  emp.grade === 'F' ? 'negative' : '';
-                
-                html += `
-                    <div class="employee-row">
-                        <div>
-                            ${emp.name}
-                            ${emp.auto_clocked ? '<span style="color: #ef4444;">🔴</span>' : ''}
-                        </div>
-                        <div>${emp.position}</div>
-                        <div>${emp.orders_served}</div>
-                        <div>
-                            ${emp.avg_time ? emp.avg_time.toFixed(1) + ' min' : 
-                              emp.kitchen_output ? `${emp.kitchen_output} output` : 'N/A'}
-                            <span class="change ${gradeClass}" style="margin-left: 10px;">
-                                ${emp.grade}
-                            </span>
-                        </div>
-                    </div>
-                `;
             });
             
-            html += `
+            if (driveRevenue + lobbyRevenue < data.revenue) {
+                lobbyRevenue = data.revenue - driveRevenue;
+            }
+            
+            let html = `
+                <h2>${data.restaurant} - ${data.date}</h2>
+                <div class="key-metrics" style="background: white; padding: 15px; border-radius: 10px; margin: 20px 0;">
+                    <div class="metric">
+                        <div class="metric-value">$${data.revenue.toLocaleString()}</div>
+                        <div class="metric-label">Total Revenue</div>
                     </div>
-                    
-                    <div style="margin-top: 20px; padding: 15px; background: #f3f4f6; border-radius: 8px;">
-                        <div style="font-size: 0.9rem; color: #666;">
-                            🔴 = Auto-clocked out • 
-                            Grades: A (Excellent) B (Good) C (Average) D (Below) F (Poor)
+                    <div class="metric">
+                        <div class="metric-value">${data.orders}</div>
+                        <div class="metric-label">Orders</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value grade-${data.grade.replace('+', '').replace('-', '')}" style="padding: 5px 10px; border-radius: 5px;">
+                            ${data.grade}
                         </div>
+                        <div class="metric-label">Grade</div>
                     </div>
                 </div>
+                
+                <h3 style="margin-top: 30px;">Issues Detected</h3>
             `;
+            
+            if (data.issues_detected && data.issues_detected.length > 0) {
+                data.issues_detected.forEach(issue => {
+                    if (window.innerWidth <= 768) {
+                        html += `<div class="issue-bubble">${issue}</div>`;
+                    } else {
+                        html += `<div style="padding: 10px; background: #fee2e2; border-radius: 8px; margin: 10px 0;">${issue}</div>`;
+                    }
+                });
+            } else {
+                html += '<p>No issues detected</p>';
+            }
             
             container.innerHTML = html;
         }
